@@ -1,6 +1,6 @@
 import '@shopify/polaris/build/esm/styles.css';
 import {Page} from '@shopify/polaris';
-import NavBar from './components/NavBar';
+import TopBar from './components/TopBar';
 import React from "react";
 import ImageCard from "./components/ImageCard";
 import enTranslations from '@shopify/polaris/locales/en.json';
@@ -10,7 +10,7 @@ function App() {
 
   return (
       <AppProvider i18n={enTranslations}>
-      <NavBar />
+      <TopBar />
     <Page title="Example app">
       {/*<Card sectioned style={{width: "80%", margin: "0", padding: "0"}}>
        <img src="https://apod.nasa.gov/apod/image/2201/HOOClassicBinned_ps1024.jpg" width={"100%"}/>
