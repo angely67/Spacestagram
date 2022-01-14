@@ -17,14 +17,8 @@ jobs:
       - name: 'Install Node'
         uses: actions/setup-node@v2
       - name: "Install dependencies"
-        run: |
-          cd app
-          yarn install 
+        run: yarn install 
       - name: "Run Test"
-        run: |
-          cd app
-          yarn test
+        run: yarn test
       - name: "Build"
-        run: |
-          cd app
-          yarn build
+        run: yarn build
