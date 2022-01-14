@@ -1,5 +1,5 @@
 import React from "react";
-import ImageCard from "./ImageCard";
+//import ImageCard from "./ImageCard";
 
 class ImageCardLists extends React.Component {
 
@@ -27,9 +27,10 @@ class ImageCardLists extends React.Component {
     render() {
         return (
             <div style={{width: "50%", marginLeft: "auto", marginRight: "auto"}}>
-                {this.state.imgs.map(d => (
+                {/*this.state.imgs.map(d => (
                     <ImageCard img={d}/>
-                ))}
+                ))*/}
+                Hi
             </div>
         )
     }
