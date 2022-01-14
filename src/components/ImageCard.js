@@ -22,6 +22,7 @@ class ImageCard extends React.Component {
         return (
             <Card style={{width: "100%", margin: "0", padding: "0"}}>
                 {this.state.img.url}
+                <img src="https://apod.nasa.gov/apod/image/0812/thackeray_hst.jpg" alt="NASA Images"></img>
              {/*<img src={this.state.img.url} width={"100%"} alt="NASA Images"/>
                 <div style={{padding: "10px"}}>
                 {this.state.img.url}

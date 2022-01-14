@@ -27,7 +27,6 @@ class ImageCardLists extends React.Component {
     render() {
         return (
             <div style={{width: "50%", marginLeft: "auto", marginRight: "auto"}}>
-                <img src="https://apod.nasa.gov/apod/image/0812/thackeray_hst.jpg" alt="NASA Images"></img>
                 {this.state.imgs.map(d => (
                     <ImageCard img={d}/>
                 ))}
