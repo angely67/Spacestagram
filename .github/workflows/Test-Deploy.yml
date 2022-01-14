@@ -14,12 +14,17 @@ jobs:
       PORT: 25277
     steps:
       - uses: actions/checkout@v2
-      - run: cd app
       - name: 'Install Node'
         uses: actions/setup-node@v2
       - name: "Install dependencies"
-        run: yarn install 
+        run: |
+          cd .\app\
+          yarn install 
       - name: "Run Test"
-        run: yarn test
+        run: |
+          cd .\app\
+          yarn test
       - name: "Build"
-        run: yarn build
+        run: |
+          cd .\app\
+          yarn build
