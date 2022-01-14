@@ -1,7 +1,7 @@
 //import '@shopify/polaris/build/esm/styles.css';
 import {Card} from '@shopify/polaris';
 import React from "react";
-//import { RiHeart3Line, RiHeart3Fill } from 'react-icons/ri';
+import { RiHeart3Line, RiHeart3Fill } from 'react-icons/ri';
 
 class ImageCard extends React.Component {
 
@@ -27,6 +27,9 @@ class ImageCard extends React.Component {
                 <h1>{this.state.img.title}</h1>
                 <h2>{this.state.img.date}</h2>
                 <text>{this.state.img.explanation}</text>
+                <br/>
+                {!this.state.isLiked ? <RiHeart3Line style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} /> 
+         : <RiHeart3Fill style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} />}
                 </div>
              {/*<img src={this.state.img.url} width={"100%"} alt="NASA Images"/>
                 <div style={{padding: "10px"}}>
