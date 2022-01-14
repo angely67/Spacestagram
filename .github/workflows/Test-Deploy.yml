@@ -16,7 +16,7 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         run: cd .\app\
       - name: 'Install Node'
         uses: actions/setup-node@v2
