@@ -18,13 +18,13 @@ jobs:
         uses: actions/setup-node@v2
       - name: "Install dependencies"
         run: |
-          cd .\app\
+          cd app
           yarn install 
       - name: "Run Test"
         run: |
-          cd .\app\
+          cd app
           yarn test
       - name: "Build"
         run: |
-          cd .\app\
+          cd app
           yarn build
