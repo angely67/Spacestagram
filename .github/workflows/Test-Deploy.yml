@@ -13,12 +13,11 @@ jobs:
     env:
       PORT: 25277
     steps:
-      - run: ls
-      - run: cd app
       - uses: actions/checkout@v2
+      - run: cd app
       - name: 'Install Node'
         uses: actions/setup-node@v2
-      - name: Install dependencies
+      - name: "Install dependencies"
         run: yarn install 
       - name: "Run Test"
         run: yarn test
