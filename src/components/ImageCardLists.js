@@ -30,7 +30,6 @@ class ImageCardLists extends React.Component {
                 {this.state.imgs.map(d => (
                     <ImageCard img={d}/>
                 ))}
-                Hi
             </div>
         )
     }
