@@ -9,16 +9,11 @@ class ImageCardLists extends React.Component {
 
         this.state = {
             imgs: [],
-            maxWidth: props.MaxWidth
-            //dateRange: props.dateRange
+            maxWidth: props.maxWidth
         }
     }
 
     fetchNewImgs(){
-        //change date to YYYY-MM-DD
-        //var startDate = this.state.dateRange.startDate;
-        //startDate = startDate.getFullYear() + "-" + (startDate.getMonth()+1) + "-" + startDate.getDate();
-
         fetch("https://api.nasa.gov/planetary/apod?api_key=YL44zoFXxMZ1ZZE0Ig2fxdmV1ieoJmwNa7XOkRdY&count=10") 
             .then(response => response.json())
             .then(newImages => {
@@ -36,15 +31,15 @@ class ImageCardLists extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if(prevProps.MaxWidth !== this.props.MaxWidth){
-            this.setState({MaxWidth: this.props.MaxWidth});
+        if(prevProps.maxWidth !== this.props.maxWidth){
+            this.setState({maxWidth: this.props.maxWidth});
         }
       }
 
 
     render() {
         return (
-            <div style={{width: this.state.maxWidth, marginLeft: "auto", marginRight: "auto"}}>
+            <div style={{width: this.state.maxWidth+"px", marginLeft: "auto", marginRight: "auto"}}>
                 {this.state.imgs.map(d => (
                     <ImageCard key={d.url} img={d}/>
                 ))}

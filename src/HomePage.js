@@ -5,43 +5,32 @@ import React, {useEffect, useState} from "react";
 import ImageCardLists from "./components/ImageCardLists";
 import enTranslations from '@shopify/polaris/locales/en.json';
 import {AppProvider} from '@shopify/polaris';
-//import ImageCard from "./components/ImageCard";
 
 function App() {
   const [postWidth, setPostWidth] = useState(window.innerWidth/2);
-  /*const [dateRange, setDateRange] = useState({ 
-    startDate: new Date(),
-    endDate: (new Date()).setFullYear(1700)
-  });*/
 
   useEffect(() => {
     function handleResize() {
-      if(window.innerWidth <= 500){
+      var threshold = window.innerHeight-100; //So the image can fit in one page
+      if(window.innerWidth <= threshold){
+        console.log(window.innerWidth);
         setPostWidth(window.innerWidth);
       }
-      else if(window.innerWidth/2 >= 500){
-        setPostWidth(window.innerWidth/2);
-      }
-      else{
-        setPostWidth(500);
+      //If the window is too big
+      else {
+        setPostWidth(Math.min(window.innerWidth/2, threshold));
       }
       
     }
     window.addEventListener('resize', handleResize);
+    handleResize();
 })
-
-/*const HandleDateChangeCallback = (startDate, endDate) =>{
-  setDateRange({
-    startDate: startDate,
-    endDate: endDate
-  });
-}*/
 
   return (
     <AppProvider i18n={enTranslations}>
-      <TopBar /*parentCallback={HandleDateChangeCallback}*//>
+      <TopBar />
       <Page>
-        <ImageCardLists maxWidth={postWidth} /*dateRange={dateRange}*/ />
+        <ImageCardLists maxWidth={postWidth} />
       </Page>
     </AppProvider>
   );
