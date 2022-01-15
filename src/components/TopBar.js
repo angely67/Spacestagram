@@ -11,16 +11,19 @@ class TopBar extends React.Component {
 
         return (
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand href="#home">Spacestagram</Navbar.Brand>
+                <Container style={{height:"95%", margin: "auto", padding: 0}}>
+                    <Navbar.Brand href="#home" style={{fontSize: "3em"}}>Spacestagram</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto">
+                        <Nav className="ms-auto" bg="dark" variant="dark" >
                             <form>
                                 <div className="input-group ms-auto">
-                                <DatePicker
-                                 selected={today}
-                                />
+                                    <label style={{color: "white", float: "left"}} classname="datepicker__title" for="date">Images Before:</label>
+                                    <DatePicker
+                                    id="date"
+                                    style={{float: "left"}}
+                                        selected={today}
+                                    />       
                                 </div> 
                             </form>
                         </Nav>

@@ -15,7 +15,9 @@ class ImageCard extends React.Component {
     }
 
     likePicture = () => {
-        this.setState({isLiked: !this.state.isLiked});
+        this.setState(prevState => ({
+            isLiked: !prevState.isLiked
+          }));
       }
 
     render() {
@@ -31,16 +33,6 @@ class ImageCard extends React.Component {
                {!this.state.isLiked ? <RiHeartLine style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} /> 
          : <RiHeartFill style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} />}
                 </div>
-             {/*<img src={this.state.img.url} width={"100%"} alt="NASA Images"/>
-                <div style={{padding: "10px"}}>
-                {this.state.img.url}
-                <h1>{this.state.img.title}</h1>
-                <h2>{this.state.img.date}</h2>
-                <text>{this.state.img.explanation}</text>
-                <br/> 
-         {!this.state.isLiked ? <RiHeart3Line className='heart'style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} /> 
-         : <RiHeart3Fill className='heart' style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} />}
-*/}
       </Card>
         )
     }
