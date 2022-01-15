@@ -9,6 +9,10 @@ import {AppProvider} from '@shopify/polaris';
 
 function App() {
   const [postWidth, setPostWidth] = useState(window.innerWidth/2);
+  /*const [dateRange, setDateRange] = useState({ 
+    startDate: new Date(),
+    endDate: (new Date()).setFullYear(1700)
+  });*/
 
   useEffect(() => {
     function handleResize() {
@@ -26,11 +30,18 @@ function App() {
     window.addEventListener('resize', handleResize);
 })
 
+/*const HandleDateChangeCallback = (startDate, endDate) =>{
+  setDateRange({
+    startDate: startDate,
+    endDate: endDate
+  });
+}*/
+
   return (
     <AppProvider i18n={enTranslations}>
-      <TopBar/>
+      <TopBar /*parentCallback={HandleDateChangeCallback}*//>
       <Page>
-        <ImageCardLists maxWidth={postWidth}/>
+        <ImageCardLists maxWidth={postWidth} /*dateRange={dateRange}*/ />
       </Page>
     </AppProvider>
   );

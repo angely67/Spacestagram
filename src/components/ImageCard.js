@@ -28,7 +28,7 @@ class ImageCard extends React.Component {
                 <div style={{padding: "10px"}}>
                 <h1>{this.state.img.title}</h1>
                 <h2>{this.state.img.date}</h2>
-                <text>{this.state.img.explanation}</text>
+                <h4>{this.state.img.explanation}</h4>
                 <br/>
                {!this.state.isLiked ? <RiHeartLine style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} /> 
          : <RiHeartFill style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} />}
