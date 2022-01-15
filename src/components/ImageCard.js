@@ -35,11 +35,11 @@ class ImageCard extends React.Component {
                 <h2>{this.state.img.date}</h2>
                 <span>{this.state.img.explanation}</span>
                 <br/>
-               {!this.state.isLiked ? <RiHeartLine style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} /> 
-         : <RiHeartFill style={{color: "red", fontSize: "3em"}} onClick={() => this.likePicture()} />}
+               {!this.state.isLiked ? <RiHeartLine title="Please Like Me :)" style={{color: "red", fontSize: "3em", cursor: "pointer"}} onClick={() => this.likePicture()} /> 
+         : <RiHeartFill title="Please Don't Dislike Me :(" style={{color: "red", fontSize: "3em", cursor: "pointer"}} onClick={() => this.likePicture()} />}
 
-         {!this.state.isCopied ? <RiFileCopyLine style={{color: "black", fontSize: "3em"}} onClick={() => this.copyPicture()} /> 
-         : <RiFileCopyFill style={{color: "green", fontSize: "3em"}} onClick={() => this.copyPicture()} />}
+         {!this.state.isCopied ? <RiFileCopyLine title="Copy Image URL to Clipboard" style={{color: "black", fontSize: "3em", cursor: "pointer"}} onClick={() => this.copyPicture()} /> 
+         : <RiFileCopyFill title="Copy Image URL to Clipboard" style={{color: "green", fontSize: "3em", cursor: "pointer"}} onClick={() => this.copyPicture()} />}
                 </div>
       </Card>
         )
