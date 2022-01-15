@@ -9,7 +9,10 @@ class TopBar extends React.Component {
         return (
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container style={{height:"95%", margin: "auto", padding: 0}}>
-                    <Navbar.Brand style={{fontSize: "4em", marginLeft:  "5%"}}>Spacestagram</Navbar.Brand>
+                    <Navbar.Brand style={{fontSize: "4em", marginLeft:  "5%"}}>
+                    <img src={require('./white_earth.png')}  style={{width: 40, height: 40, marginRight: 10}} class="d-inline-block align-middle" alt=""></img>
+                        Spacestagram
+                    </Navbar.Brand>
                 </Container>
             </Navbar>
         )

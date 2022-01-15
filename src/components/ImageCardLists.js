@@ -14,9 +14,21 @@ class ImageCardLists extends React.Component {
     }
 
     fetchNewImgs(){
-        fetch("https://api.nasa.gov/planetary/apod?api_key=YL44zoFXxMZ1ZZE0Ig2fxdmV1ieoJmwNa7XOkRdY&count=10") 
+        fetch("https://api.nasa.gov/planetary/apod?api_key=YL44zoFXxMZ1ZZE0Ig2fxdmV1ieoJmwNa7XOkRdY&count=10&thumbs=true") 
             .then(response => response.json())
-            .then(newImages => {
+            .then(newSearches => {
+                var newImages = [];
+                newSearches.forEach(result => {
+                    if(result.thumbnail_url){//video
+                        var temp = result;
+                        temp.url = temp.thumbnail_url;
+                        newImages.push(temp);
+                    }
+                    else{
+                        newImages.push(result);
+                    }
+                });
+
                 this.setState(prevState => ({
                     imgs: prevState.imgs.concat(newImages)
                   }));

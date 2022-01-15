@@ -5,6 +5,7 @@ import React, {useEffect, useState} from "react";
 import ImageCardLists from "./components/ImageCardLists";
 import enTranslations from '@shopify/polaris/locales/en.json';
 import {AppProvider} from '@shopify/polaris';
+import "./HomePage.css";
 
 function App() {
   const [postWidth, setPostWidth] = useState(window.innerWidth/2);

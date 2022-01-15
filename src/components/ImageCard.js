@@ -28,20 +28,19 @@ class ImageCard extends React.Component {
     render() {
         return (
             <Card style={{width: "100%", margin: "0", padding: "0"}}>
-                
                 <img src={this.state.img.url} width="100%" alt="NASA Images"></img>
                 <div style={{padding: "10px"}}>
-                <h1>{this.state.img.title}</h1>
-                <h2>{this.state.img.date}</h2>
-                <span>{this.state.img.explanation}</span>
-                <br/>
-               {!this.state.isLiked ? <RiHeartLine title="Please Like Me :)" style={{color: "red", fontSize: "3em", cursor: "pointer"}} onClick={() => this.likePicture()} /> 
-         : <RiHeartFill title="Please Don't Dislike Me :(" style={{color: "red", fontSize: "3em", cursor: "pointer"}} onClick={() => this.likePicture()} />}
+                    <h1>{this.state.img.title}</h1>
+                    <h2>{this.state.img.date}</h2>
+                    <span style={{fontSize: "1.2em"}}>{this.state.img.explanation}</span>
+                    <br/>
+                    {!this.state.isLiked ? <RiHeartLine title="Please Like Me :)" style={{color: "red", fontSize: "3em", cursor: "pointer"}} onClick={() => this.likePicture()} /> 
+                    : <RiHeartFill title="Please Don't Dislike Me :(" style={{color: "red", fontSize: "3em", cursor: "pointer"}} onClick={() => this.likePicture()} />}
 
-         {!this.state.isCopied ? <RiFileCopyLine title="Copy Image URL to Clipboard" style={{color: "black", fontSize: "3em", cursor: "pointer"}} onClick={() => this.copyPicture()} /> 
-         : <RiFileCopyFill title="Copy Image URL to Clipboard" style={{color: "green", fontSize: "3em", cursor: "pointer"}} onClick={() => this.copyPicture()} />}
+                    {!this.state.isCopied ? <RiFileCopyLine title="Copy Image URL to Clipboard" style={{color: "black", fontSize: "3em", cursor: "pointer"}} onClick={() => this.copyPicture()} /> 
+                    : <RiFileCopyFill title="Copy Image URL to Clipboard" style={{color: "green", fontSize: "3em", cursor: "pointer"}} onClick={() => this.copyPicture()} />}
                 </div>
-      </Card>
+            </Card>
         )
     }
 }
