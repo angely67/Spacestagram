@@ -6,7 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import {Navbar, Container} from "react-bootstrap";
 
 class TopBar extends React.Component {
-    constructor(props) {
+    /*constructor(props) {
         super(props);
 
         var oldDate = new Date();
@@ -17,13 +17,13 @@ class TopBar extends React.Component {
             startDate: oldDate,
             endDate: today
         }
-    }
+    }*/
 
     render() {
         return (
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container style={{height:"95%", margin: "auto", padding: 0}}>
-                    <Navbar.Brand href="#home" style={{fontSize: "4em", marginLeft:  "5%"}}>Spacestagram</Navbar.Brand>
+                    <Navbar.Brand style={{fontSize: "4em", marginLeft:  "5%"}}>Spacestagram</Navbar.Brand>
                     {/*<Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav bg="dark" variant="dark" >
