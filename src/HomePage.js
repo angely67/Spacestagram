@@ -29,7 +29,7 @@ function App() {
 
   return (
     <AppProvider i18n={enTranslations}>
-      <TopBar />
+      <TopBar style={{width: "100%"}}/>
       <Page>
         <ImageCardLists maxWidth={postWidth} />
       </Page>
