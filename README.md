@@ -1,6 +1,6 @@
 # Spacestagram
 
- [Spacestagram](https://spacestagram-webapp.herokuapp.com/) is a webapp created to help share photos from one of NASA’s image APIs, [apod](https://api.nasa.gov/#apod).
+ [Spacestagram](https://spacestagram-webapp.herokuapp.com/) is a webapp created to help share photos from one of NASA’s image APIs, [apod](https://api.nasa.gov/#apod). The webapp is hosted on heroku using a free acount, so if the app was not recently accessed it will take a while for the app to load up.
  <br />
  Here is the [dev enivronment](http://dev-spacestagram-webapp.herokuapp.com/).
 
