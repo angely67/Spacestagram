@@ -1,10 +1,10 @@
 # Spacestagram
 
- [Spacestagram](https://spacestagram-webapp.herokuapp.com/) is a webapp created to help share photos from one of NASA’s image APIs, [apod](https://api.nasa.gov/#apod). The webapp is hosted on heroku using a free acount, so if the app was not recently accessed it will take a while for the app to load up.
+ [Spacestagram](https://spacestagram-webapp.herokuapp.com/) is a webapp created to help share photos from one of NASA’s image APIs, [apod](https://api.nasa.gov/#apod). The webapp is hosted on heroku using a free acount, so if the app was not recently accessed it will take a while for the app to load up. If it happens to show "Application Error" this is also due to the webpage sleeping when not recently accessed. Just refresh and it should be good.
  <br />
  Here is the [dev enivronment](http://dev-spacestagram-webapp.herokuapp.com/).
 
-
+![plot](./preview.png)
 
 
 ## Local environment installation guidelines
